@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<schema xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:framework:Setup/Declaration/Schema/etc/schema.xsd">
+    <table name="graycore_graphql_log" resource="default" engine="innodb" comment="">
+        <column xsi:type="int" name="log_id" unsigned="true" nullable="false" identity="true" />
+        <column xsi:type="varchar" name="hash" nullable="false" length="64" />
+        <column xsi:type="varchar" name="method" nullable="false" length="4" />
+        <column xsi:type="text" name="query" nullable="false" />
+        <column xsi:type="datetime" name="updated" nullable="false" default="CURRENT_TIMESTAMP" on_update="true" />
+
+        <constraint xsi:type="primary" referenceId="PRIMARY">
+            <column name="log_id"/>
+        </constraint>
+
+        <constraint xsi:type="unique" referenceId="GRAYCORE_GRAPHQL_LOG_HASH_UNQ">
+            <column name="hash" />
+        </constraint>
+    </table>
+</schema>

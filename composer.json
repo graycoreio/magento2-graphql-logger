@@ -1,0 +1,46 @@
+{
+    "name": "graycore/magento2-graphql-logger",
+    "type": "magento2-module",
+    "require": {
+        "php": ">=7.4",
+        "magento/framework": "*",
+        "magento/module-graph-ql": "^100.0.0"
+    },
+    "require-dev": {
+        "magento/magento-coding-standard": ">=6.0",
+        "phpunit/phpunit": "^8.0 || ^9.0",
+        "squizlabs/php_codesniffer": "^3.0"
+    },
+    "license": [
+        "MIT"
+    ],
+    "autoload": {
+        "files": [
+            "registration.php"
+        ],
+        "psr-4": {
+            "Graycore\\GraphQlLogger\\": ""
+        }
+    },
+    "archive": {
+        "exclude": [
+            "/docs",
+            "/Test",
+            "README.md"
+        ]
+    },
+    "repositories": [
+        {
+            "type": "composer",
+            "url": "https://repo.magento.com/"
+        }
+    ],
+    "config": {
+        "preferred-install": "dist",
+        "sort-packages": true,
+        "allow-plugins": {
+            "magento/composer-dependency-version-audit-plugin": true,
+            "magento/magento-composer-installer": false
+        }
+    }
+}

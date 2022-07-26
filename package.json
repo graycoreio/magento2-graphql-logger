@@ -1,0 +1,24 @@
+{
+  "name": "@graycore/magento2-graphql-logger",
+  "description": "A Magento 2 module that enables caching of GraphQl introspection queries.",
+  "version": "0.1.1",
+  "directories": {
+    "doc": "docs"
+  },
+  "private": true,
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/graycoreio/magento2-graphql-logger.git"
+  },
+  "scripts": {
+    "release": "standard-version"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/graycoreio/magento2-graphql-logger/issues"
+  },
+  "homepage": "https://github.com/graycoreio/magento2-graphql-logger#readme",
+  "devDependencies": {
+    "standard-version": "^9.1.1"
+  }
+}

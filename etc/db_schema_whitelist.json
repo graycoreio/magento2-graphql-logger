@@ -1,0 +1,19 @@
+{
+    "graycore_graphql_log": {
+        "column": {
+            "log_id": true,
+            "hash": true,
+            "method": true,
+            "query": true,
+            "updated": true
+        },
+        "index": {
+            "GRAYCORE_GRAPHQL_LOG_LOG_ID": true,
+            "GRAYCORE_GRAPHQL_LOG_HASH": true
+        },
+        "constraint": {
+            "PRIMARY": true,
+            "GRAYCORE_GRAPHQL_LOG_HASH": true
+        }
+    }
+}
