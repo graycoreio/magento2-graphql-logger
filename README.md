@@ -30,3 +30,4 @@ composer require graycore/magento2-graphql-logger
 This module is disabled by default. It can be enabled through system configuration: Services -> Magento Web API -> GraphQl Logger -> Enable Logger.
 
 Logs can be found in `graycore_graphql_log`.
+
