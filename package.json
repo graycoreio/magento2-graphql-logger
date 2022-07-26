@@ -1,7 +1,7 @@
 {
   "name": "@graycore/magento2-graphql-logger",
-  "description": "A Magento 2 module that enables caching of GraphQl introspection queries.",
-  "version": "0.1.1",
+  "description": "This module logs unique GraphQl queries for development purposes.",
+  "version": "0.1.0",
   "directories": {
     "doc": "docs"
   },
