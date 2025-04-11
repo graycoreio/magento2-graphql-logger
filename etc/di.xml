@@ -3,4 +3,14 @@
         xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
     <preference for="Graycore\GraphQlLogger\Api\LogRepositoryInterface" type="Graycore\GraphQlLogger\Model\LogRepository"/>
     <preference for="Graycore\GraphQlLogger\Api\Data\LogInterface" type="Graycore\GraphQlLogger\Model\Log"/>
+    <type name="Magento\GraphQl\Model\Query\Logger\LoggerPool">
+        <arguments>
+            <argument name="loggers" xsi:type="array">
+                <item name="graycoreGraphqlLogger" xsi:type="object">Graycore\GraphQlLogger\Logger\Logger</item>
+            </argument>
+        </arguments>
+    </type>
+    <type name="Magento\GraphQl\Helper\Query\Logger\LogData">
+        <plugin name="Graycore_GraphQlLogger::additionalLogData" type="Graycore\GraphQlLogger\Plugin\LogDataPlugin"/>
+    </type>
 </config>
