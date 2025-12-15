@@ -8,6 +8,9 @@ use Magento\GraphQl\Helper\Query\Logger\LogData;
 
 class LogDataPlugin
 {
+    /**
+     * @var Config
+     */
     private Config $config;
 
     /**
@@ -19,6 +22,15 @@ class LogDataPlugin
         $this->config = $config;
     }
 
+    /**
+     * Add query to log data
+     *
+     * @param LogData $logdata
+     * @param array $result
+     * @param RequestInterface $request
+     * @param array $data
+     * @return array
+     */
     public function afterGetLogData(
         LogData $logdata,
         array $result,

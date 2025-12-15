@@ -11,10 +11,26 @@ use Psr\Log\LoggerInterface;
 
 class LogRepository implements LogRepositoryInterface
 {
+    /**
+     * @var LogFactory
+     */
     private LogFactory $logFactory;
+
+    /**
+     * @var LogResource
+     */
     private LogResource $logResource;
+
+    /**
+     * @var LoggerInterface
+     */
     private LoggerInterface $logger;
 
+    /**
+     * @param LogFactory $logFactory
+     * @param LogResource $logResource
+     * @param LoggerInterface $logger
+     */
     public function __construct(LogFactory $logFactory, LogResource $logResource, LoggerInterface $logger)
     {
         $this->logFactory = $logFactory;
@@ -22,6 +38,9 @@ class LogRepository implements LogRepositoryInterface
         $this->logger = $logger;
     }
 
+    /**
+     * @inheritdoc
+     */
     public function save(LogInterface $log): LogInterface
     {
         try {
@@ -32,6 +51,9 @@ class LogRepository implements LogRepositoryInterface
         return $log;
     }
 
+    /**
+     * @inheritdoc
+     */
     public function getByHash(string $hash): LogInterface
     {
         /** @var LogInterface $log */

@@ -15,7 +15,14 @@ use PHPUnit\Framework\TestCase;
  */
 class LogTest extends TestCase
 {
+    /**
+     * @var ObjectManager
+     */
     private $om;
+
+    /**
+     * @var LogRepositoryInterface
+     */
     private $logRepository;
 
     protected function setUp(): void

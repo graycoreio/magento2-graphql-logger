@@ -12,12 +12,30 @@ use Magento\Framework\Stdlib\DateTime\TimezoneInterface;
 
 class Logger implements LoggerInterface
 {
+    /**
+     * @var LogRepositoryInterface
+     */
     private LogRepositoryInterface $logRepository;
+
+    /**
+     * @var LogFactory
+     */
     private LogFactory $logFactory;
+
+    /**
+     * @var TimezoneInterface
+     */
     private TimezoneInterface $date;
+
+    /**
+     * @var Config
+     */
     private Config $config;
 
     /**
+     * @param LogRepositoryInterface $logRepository
+     * @param LogFactory $logFactory
+     * @param TimezoneInterface $date
      * @param Config $config
      */
     public function __construct(

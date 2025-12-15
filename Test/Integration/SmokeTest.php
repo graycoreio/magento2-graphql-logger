@@ -13,8 +13,19 @@ use PHPUnit\Framework\TestCase;
  */
 class SmokeTest extends TestCase
 {
+    /**
+     * @var ObjectManager
+     */
     private $om;
+
+    /**
+     * @var Json
+     */
     private $serializer;
+
+    /**
+     * @var GraphQl
+     */
     private $graphqlController;
 
     protected function setUp(): void
