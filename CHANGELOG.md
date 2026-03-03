@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [0.2.2](https://github.com/graycoreio/magento2-graphql-logger/compare/v0.2.1...v0.2.2) (2026-03-03)
+
+
+### Miscellaneous Chores
+
+* remove unused nodejs deps ([99a9630](https://github.com/graycoreio/magento2-graphql-logger/commit/99a96303638491d2fb3a07e8cac080ce7c06a6cf))
+
 ## [0.2.1](https://github.com/graycoreio/magento2-graphql-logger/compare/v0.2.0...v0.2.1) (2025-10-23)
 
 
