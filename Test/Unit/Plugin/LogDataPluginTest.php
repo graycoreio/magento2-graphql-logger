@@ -7,6 +7,7 @@ use Graycore\GraphQlLogger\Plugin\LogDataPlugin;
 use Magento\Framework\App\RequestInterface;
 use Magento\GraphQl\Helper\Query\Logger\LogData;
 use PHPUnit\Framework\MockObject\MockObject;
+use PHPUnit\Framework\MockObject\Stub;
 use PHPUnit\Framework\TestCase;
 
 class LogDataPluginTest extends TestCase
@@ -17,12 +18,12 @@ class LogDataPluginTest extends TestCase
     private $configMock;
 
     /**
-     * @var LogData|MockObject
+     * @var LogData|Stub
      */
     private $logDataMock;
 
     /**
-     * @var RequestInterface|MockObject
+     * @var RequestInterface|Stub
      */
     private $requestMock;
 
@@ -34,8 +35,8 @@ class LogDataPluginTest extends TestCase
     protected function setUp(): void
     {
         $this->configMock = $this->createMock(Config::class);
-        $this->logDataMock = $this->createMock(LogData::class);
-        $this->requestMock = $this->createMock(RequestInterface::class);
+        $this->logDataMock = $this->createStub(LogData::class);
+        $this->requestMock = $this->createStub(RequestInterface::class);
 
         $this->plugin = new LogDataPlugin($this->configMock);
     }
